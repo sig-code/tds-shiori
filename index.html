@@ -157,14 +157,14 @@ label.ck input:checked + span{text-decoration:line-through;color:var(--muted);}
 
  <section id="promise">
   <h2 class="sec" style="--acc:var(--rose)">💗 ふたりの約束</h2>
-  <label class="ck"><input type="checkbox" id="c1"><span>アナ雪に乗る（DPA最優先）</span></label><label class="ck"><input type="checkbox" id="c2"><span>トイマニで勝負</span></label><label class="ck"><input type="checkbox" id="c3"><span>ギョウザドッグを半分こ</span></label><label class="ck"><input type="checkbox" id="c4"><span>アルミカップのビールで乾杯 🍺</span></label><label class="ck"><input type="checkbox" id="c5"><span>ビリーヴ!を並んで見る 💫</span></label><label class="ck"><input type="checkbox" id="c6"><span>アクアトピアの記念シールをGET 🎟</span></label><label class="ck"><input type="checkbox" id="c7"><span>写真をいっぱい撮る 📸</span></label>
+  <label class="ck"><input type="checkbox" id="c1"><span>アナ雪に乗る（DPA最優先）</span></label><label class="ck"><input type="checkbox" id="c2"><span>トイマニで勝負</span></label><label class="ck"><input type="checkbox" id="c3"><span>ギョウザドッグを半分こ</span></label><label class="ck"><input type="checkbox" id="c4"><span>アルミカップのビールで乾杯 🍺</span></label><label class="ck"><input type="checkbox" id="c5"><span>ビリーヴ!を並んで見る 💫</span></label><label class="ck"><input type="checkbox" id="c6"><span>アクアトピアの記念シールをGET 🎟</span></label><label class="ck"><input type="checkbox" id="c7"><span>写真をいっぱい撮る 📸</span></label><label class="ck"><input type="checkbox" id="c8"><span>無理をしない！いっぱい休憩する 😌</span></label><label class="ck"><input type="checkbox" id="c9"><span>ヴェネチアン・ゴンドラに乗る 🛶</span></label>
  </section>
 
  <div class="foot">マップ © Disney（個人利用）／ 情報は2026年7月時点・DPA/PP・ショー・営業時間・メニューは当日アプリで最終確認を。<br>すてきな1日になりますように。💙</div>
 </div>
 <script>
 (function(){
- var ids=["c1","c2","c3","c4","c5","c6","c7"];
+ var ids=["c1","c2","c3","c4","c5","c6","c7","c8","c9"];
  try{ids.forEach(function(id){var el=document.getElementById(id);if(!el)return;var k="tds0711w_"+id;
   if(localStorage.getItem(k)==="1")el.checked=true;
   el.addEventListener("change",function(){localStorage.setItem(k,el.checked?"1":"0");});});}catch(e){}
