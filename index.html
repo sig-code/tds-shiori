@@ -31,15 +31,11 @@ ol.steps li::before{content:counter(s);position:absolute;left:9px;top:8px;width:
 .tx{font-size:14px;flex:1;}
 /* map */
 .maphint{font-size:12px;color:var(--muted);margin:0 0 6px;}
-.mapwrap{cursor:zoom-in;-webkit-tap-highlight-color:transparent;}
+.mapwrap{-webkit-tap-highlight-color:transparent;}
 .mapinner{position:relative;width:100%;padding-top:70.75%;background:var(--map) center/100% 100% no-repeat;border-radius:12px;box-shadow:0 2px 10px rgba(13,61,69,.15);}
 .pin{position:absolute;transform:translate(-50%,-50%);width:19px;height:19px;border-radius:50%;
  background:var(--c);color:#fff;font-size:11px;font-weight:700;display:flex;align-items:center;justify-content:center;
  border:2px solid #fff;box-shadow:0 1px 3px rgba(0,0,0,.5);}
-.mapwrap.zoom{position:fixed;inset:0;z-index:100;background:#0d3d45f7;cursor:zoom-out;
- overflow:auto;padding:44px 6px;display:block;border-radius:0;}
-.mapwrap.zoom .mapinner{width:190%;max-width:none;margin:0 auto;}
-.mapwrap.zoom::before{content:"✕ タップで閉じる";position:fixed;top:12px;left:0;right:0;text-align:center;color:#fff;font-size:13px;font-weight:700;z-index:2;}
 .legend{display:flex;flex-wrap:wrap;gap:5px 12px;font-size:11.5px;margin:9px 0 4px;}
 .legend span{display:inline-flex;align-items:center;gap:4px;}.legend i{width:12px;height:12px;border-radius:50%;border:2px solid #fff;box-shadow:0 0 0 1px #bbb;}
 .keys{display:flex;flex-wrap:wrap;gap:5px 6px;margin-top:6px;}
@@ -107,8 +103,7 @@ label.ck input:checked + span{text-decoration:line-through;color:var(--muted);}
 
  <section id="map">
   <h2 class="sec" style="--acc:var(--teal)">🗺 ルートマップ</h2>
-  <p class="maphint">🔍 タップで拡大 / もう一度タップで戻る</p>
-  <div class="mapwrap" onclick="this.classList.toggle('zoom')"><div class="mapinner"><span class="pin" style="left:48%;top:51.6%;--c:#d9542a">1</span><span class="pin" style="left:25.1%;top:63.3%;--c:#d9542a">2</span><span class="pin" style="left:28.7%;top:52.6%;--c:#d9542a">3</span><span class="pin" style="left:21%;top:53%;--c:#b0803a">4</span><span class="pin" style="left:39%;top:33.7%;--c:#b0803a">5</span><span class="pin" style="left:39.8%;top:41.1%;--c:#1c7a86">6</span><span class="pin" style="left:42.4%;top:41.6%;--c:#d9698a">7</span><span class="pin" style="left:56.6%;top:29.2%;--c:#1f8a5b">8</span><span class="pin" style="left:73.8%;top:17.7%;--c:#d9542a">9</span><span class="pin" style="left:38.1%;top:58.6%;--c:#7a5aa6">10</span><span class="pin" style="left:38.8%;top:69.9%;--c:#555">S</span></div></div>
+  <div class="mapwrap"><div class="mapinner"><span class="pin" style="left:48%;top:51.6%;--c:#d9542a">1</span><span class="pin" style="left:25.1%;top:63.3%;--c:#d9542a">2</span><span class="pin" style="left:28.7%;top:52.6%;--c:#d9542a">3</span><span class="pin" style="left:21%;top:53%;--c:#b0803a">4</span><span class="pin" style="left:39%;top:33.7%;--c:#b0803a">5</span><span class="pin" style="left:39.8%;top:41.1%;--c:#1c7a86">6</span><span class="pin" style="left:42.4%;top:41.6%;--c:#d9698a">7</span><span class="pin" style="left:56.6%;top:29.2%;--c:#1f8a5b">8</span><span class="pin" style="left:73.8%;top:17.7%;--c:#d9542a">9</span><span class="pin" style="left:38.1%;top:58.6%;--c:#7a5aa6">10</span><span class="pin" style="left:38.8%;top:69.9%;--c:#555">S</span></div></div>
   <div class="legend"><span><i style="background:#d9542a"></i>DPA</span><span><i style="background:#1f8a5b"></i>PP無料</span><span><i style="background:#1c7a86"></i>スタンバイ</span><span><i style="background:#b0803a"></i>食事予約</span><span><i style="background:#d9698a"></i>約束</span><span><i style="background:#7a5aa6"></i>ショー</span></div>
   <div class="keys"><span class="key"><b style="background:#d9542a">1</b>ソアリン</span><span class="key"><b style="background:#d9542a">2</b>トイマニ</span><span class="key"><b style="background:#d9542a">3</b>タワテラ (夜)</span><span class="key"><b style="background:#b0803a">4</b>櫻 17:00</span><span class="key"><b style="background:#b0803a">5</b>ホライズンベイ 12:50</span><span class="key"><b style="background:#1c7a86">6</b>センター</span><span class="key"><b style="background:#d9698a">7</b>ギョウザ&ビール</span><span class="key"><b style="background:#1f8a5b">8</b>レイジング PP</span><span class="key"><b style="background:#d9542a">9</b>アナ雪 DPA 最優先</span><span class="key"><b style="background:#7a5aa6">10</b>ビリーヴ! 20:15</span><span class="key"><b style="background:#555">S</b>START 入園</span></div>
  </section>
@@ -131,8 +126,8 @@ label.ck input:checked + span{text-decoration:line-through;color:var(--muted);}
 
  <section id="food">
   <h2 class="sec" style="--acc:var(--brass)">🍴 グルメマップ</h2>
-  <p class="maphint">🔍 タップで拡大。緑番号①〜⑬＝モバイルオーダー店（下で店名タップ→メニュー）。</p>
-  <div class="mapwrap" onclick="this.classList.toggle('zoom')"><div class="mapinner"><span class="pin" style="left:43.8%;top:53.4%;--c:#2c8a63">1</span><span class="pin" style="left:38.7%;top:44.9%;--c:#2c8a63">2</span><span class="pin" style="left:30.8%;top:57.7%;--c:#2c8a63">3</span><span class="pin" style="left:21.2%;top:54.7%;--c:#2c8a63">4</span><span class="pin" style="left:30.8%;top:43.9%;--c:#2c8a63">5</span><span class="pin" style="left:42.8%;top:42.5%;--c:#2c8a63">6</span><span class="pin" style="left:66.9%;top:61.4%;--c:#2c8a63">7</span><span class="pin" style="left:57.4%;top:40.9%;--c:#2c8a63">8</span><span class="pin" style="left:50.7%;top:34.1%;--c:#2c8a63">9</span><span class="pin" style="left:54.2%;top:28.1%;--c:#2c8a63">10</span><span class="pin" style="left:70%;top:20%;--c:#2c8a63">11</span><span class="pin" style="left:71.7%;top:17.8%;--c:#2c8a63">12</span><span class="pin" style="left:66.9%;top:11%;--c:#2c8a63">13</span></div></div>
+  <p class="maphint">緑番号①〜⑬＝モバイルオーダー店（下で店名タップ→メニュー）</p>
+  <div class="mapwrap"><div class="mapinner"><span class="pin" style="left:43.8%;top:53.4%;--c:#2c8a63">1</span><span class="pin" style="left:38.7%;top:44.9%;--c:#2c8a63">2</span><span class="pin" style="left:30.8%;top:57.7%;--c:#2c8a63">3</span><span class="pin" style="left:21.2%;top:54.7%;--c:#2c8a63">4</span><span class="pin" style="left:30.8%;top:43.9%;--c:#2c8a63">5</span><span class="pin" style="left:42.8%;top:42.5%;--c:#2c8a63">6</span><span class="pin" style="left:66.9%;top:61.4%;--c:#2c8a63">7</span><span class="pin" style="left:57.4%;top:40.9%;--c:#2c8a63">8</span><span class="pin" style="left:50.7%;top:34.1%;--c:#2c8a63">9</span><span class="pin" style="left:54.2%;top:28.1%;--c:#2c8a63">10</span><span class="pin" style="left:70%;top:20%;--c:#2c8a63">11</span><span class="pin" style="left:71.7%;top:17.8%;--c:#2c8a63">12</span><span class="pin" style="left:66.9%;top:11%;--c:#2c8a63">13</span></div></div>
   <div class="card" style="margin-top:11px"><b style="font-family:var(--serif);color:var(--ink)">⭐ 各店の名物ピック</b>
    <ul class="picklist"><li><b>1</b> <span>ザンビーニ</span> ミートボール・スパゲッティ</li><li><b>2</b> <span>リフレスコス</span> スモークターキーレッグ</li><li><b>3</b> <span>NYデリ</span> ルーベン・ホットサンド</li><li><b>4</b> <span>ドックサイド</span> アボカドチーズバーガー</li><li><b>5</b> <span>ケープコッド</span> プルドポーク・チーズバーガー</li><li><b>6</b> <span>ノーチラス</span> ギョウザドッグ</li><li><b>7</b> <span>セバスチャン</span> ポップン・シュリンプ</li><li><b>8</b> <span>カスバ</span> コンビカリー</li><li><b>9</b> <span>ミゲルズ</span> スモークチキンレッグ</li><li><b>10</b> <span>ユカタン</span> ハッシュドビーフのライスボウル</li><li><b>11</b> <span>スナグリー</span> ダックリードリームバーガー</li><li><b>12</b> <span>アレンデール</span> ベリーホイップパンケーキ</li><li><b>13</b> <span>ルックアウト</span> ロストキッズスナックボックス</li></ul></div>
   <h2 class="sec" style="margin-top:16px;--acc:var(--brass)">🍽 全メニュー（タップで開く）</h2>
